@@ -5,7 +5,10 @@ const $ = (element) => document.getElementById(element);
 const main = $('mainContainer');
 const parrafos = qsa('p');
 const subtitulo = qs('.subtitulo');
-const listado = qs('h2 a')
+const listado = qs('h2 a');
+const menu = $('menu');
+const logo = qs('.logoDH');
+const fondo = qs('body');
 
 let nombre = prompt('¿Cuál es tu nombre?');
 
@@ -18,7 +21,7 @@ listado.style.color = '#E51B3E';
 let respuesta = confirm('¿Querés cambiar el fondo?');
 
 if(respuesta){
-  qs('body').classList.add('fondo');
+  fondo.classList.add('fondo');
 }
 
 parrafos.forEach((parrafo, index) => {
